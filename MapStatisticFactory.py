@@ -23,7 +23,7 @@ class MapStatisticFactory:
         iter=iter, 
         f_C=f_C, 
         f_C_corr=bs(num_Of_C-f_C)/self.gameParameters.OptimalNum1, #
-        av_pay=0, #na razie
+        av_pay=1, #na razie
         f_cr0=len(self.Map.Group8_0),
         f_cr_1=len(self.Map.Group8_1),
         f_allC=self.StrategyMatrix[StrategiesEnum.allC.value]/(C*R), 
@@ -31,5 +31,5 @@ class MapStatisticFactory:
         f_Kd=self.StrategyMatrix[StrategiesEnum.kC.value]/(C*R),  
         f_Kc=self.StrategyMatrix[StrategiesEnum.kD.value]/(C*R),  
         f_Kdc=self.StrategyMatrix[StrategiesEnum.kDC.value]/(C*R),  
-        fstrat_ch=0.0#na razie
+        fstrat_ch=1.0#na razie
         )
