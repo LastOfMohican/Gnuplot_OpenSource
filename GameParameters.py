@@ -1,6 +1,7 @@
 
 from enum import Enum
 import GameParameters
+
 class MapParameters:
     def __init__(self, rows:int,col:int, initC:float) -> None:
         self.Rows=rows
@@ -9,8 +10,7 @@ class MapParameters:
         
     def getTestData():
         return MapParameters(
-            #test data
-            #TO DO MACIEJ 
+            10,10,0.4
         )    
            
 class StrategiesParameters:
@@ -25,18 +25,14 @@ class StrategiesParameters:
 
     def getTestData():
         return StrategiesParameters(
-            #test data
-            #TO DO MACIEJ 
+            0.3,0.3,0.1,0.1,0.2,1,8
         )                     
 class ComprtitionType(Enum):
     Roulette = 0
     Tournament = 1
     
     def getTestData():
-        return ComprtitionType(
-            #test data
-            #TO DO MACIEJ 
-        )        
+        return ComprtitionType.Roulette    
 class MutationParameters:
     def __init__(self, stateMut:float,stratMut:float,neighMut0:float,neighMut1:float) -> None:
         self.StateMut=stateMut
@@ -46,28 +42,23 @@ class MutationParameters:
         
     def getTestData():
         return MutationParameters(
-            #test data
-            #TO DO MACIEJ 
+            0.1,0.1,0.1,0.1
         )   
 class DebugParameters(Enum):
     ReadState = 0
     ReadStrategy = 1
     
     def getTestData():
-        return DebugParameters(
-            #test data
-            #TO DO MACIEJ 
-        )   
+        return DebugParameters.ReadState
+
 class TestParameters(Enum):
     Test1 = 1
     Test2 = 2
-    Test3 = 3
-    
+    Test3 = 3   
+
     def getTestData():
-        return list[TestParameters](
-            #test data
-            #TO DO MACIEJ 
-        )   
+        return [1,2]
+
 class PlayoffParameters:
     def __init__(self, a:float,b:float,c:float,d:float) -> None:
         self.A=a
@@ -76,8 +67,7 @@ class PlayoffParameters:
         self.D=d
     def getTestData():
         return PlayoffParameters(
-            #test data
-            #TO DO MACIEJ 
+            0.3,0.2,0.3,0.2
         )      
         
 class GameParameters:
@@ -104,10 +94,11 @@ class GameParameters:
             ComprtitionType.getTestData(),
             MutationParameters.getTestData(),
             890,
+            DebugParameters.getTestData(),
             PlayoffParameters.getTestData(),
             1.0,
             676,
-            TestParameters.getTestData()
+            [1,2]
         )    
         
         

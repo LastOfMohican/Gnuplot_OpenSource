@@ -27,3 +27,18 @@ class MapStatistic:
 
     def __repr__(self) -> str:
         return self.__str__()
+    def toList(self):
+        return [       
+        self.iter,
+        self.f_C,
+        self.f_C_corr,
+        self.av_pay,
+        self.f_cr0,
+        self.f_cr_1,
+        self.f_allC,
+        self.f_allD,
+        self.f_Kd,
+        self.f_Kc,
+        self.f_Kdc,
+        self.fstrat_ch 
+        ]  
