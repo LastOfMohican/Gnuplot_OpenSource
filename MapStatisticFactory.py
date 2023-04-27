@@ -22,7 +22,7 @@ class MapStatisticFactory:
         return MapStatistic(
         iter=iter, 
         f_C=f_C, 
-        f_C_corr=round(abs(num_Of_C-f_C)/self.gameParameters.OptimalNum1,2), #
+        f_C_corr=bs(num_Of_C-f_C)/self.gameParameters.OptimalNum1, #
         av_pay=0, #na razie
         f_cr0=len(self.Map.Group8_0),
         f_cr_1=len(self.Map.Group8_1),

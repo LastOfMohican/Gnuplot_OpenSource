@@ -21,24 +21,4 @@ class MapStatistic:
             0, 0.48, 0.01, 0.2, 0, 1, 0.2, 0.2, 0.2, 0.2, 0.2, 0
         )
 
-    def __str__(self) -> str:
-        width = 10
-        return f"{self.iter:>{width}} {self.f_C:>{width}} {self.f_C_corr:>{width}} {self.av_pay:>{width}} {self.f_cr0:>{width}} {self.f_cr_1:>{width}} {self.f_allC:>{width}} {self.f_allD:>{width}} {self.f_Kd:>{width}} {self.f_Kc:>{width}} {self.f_Kdc:>{width}} {self.fstrat_ch:>{width}}"
 
-    def __repr__(self) -> str:
-        return self.__str__()
-    def toList(self):
-        return [       
-        self.iter,
-        self.f_C,
-        self.f_C_corr,
-        self.av_pay,
-        self.f_cr0,
-        self.f_cr_1,
-        self.f_allC,
-        self.f_allD,
-        self.f_Kd,
-        self.f_Kc,
-        self.f_Kdc,
-        self.fstrat_ch 
-        ]  
