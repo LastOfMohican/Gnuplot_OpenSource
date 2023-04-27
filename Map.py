@@ -5,8 +5,8 @@ class Map:
         self.N=N
         self.M=M
         self.Matrix=[[0 for x in range(N+2)] for y in range(M+2)] 
-        self.Group8_0=[list[Point]]
-        self.Group8_1=[list[Point]]
+        self.Group8_0=[[]]
+        self.Group8_1=[[]]
     def getNeighboursMap(self,point:Point) -> Map:
         mapNeighbours: Map = Map(3,3)
         listNeighbours:list =self.getNeighboursList(point)
@@ -19,18 +19,22 @@ class Map:
         
     def getNeighboursList(self,point:Point) -> list: 
         listNeighbours:list =[]   
-        listNeighbours.append(self.Matrix[point.R-1][point.C-1])
         listNeighbours.append(self.Matrix[point.R-1][point.C])
         listNeighbours.append(self.Matrix[point.R-1][point.C+1])
         listNeighbours.append(self.Matrix[point.R][point.C+1])
         listNeighbours.append(self.Matrix[point.R+1][point.C+1])
-        listNeighbours.append(self.Matrix[point.R+1][point.C])        
-        listNeighbours.append(self.Matrix[point.R+1][point.C-1])    
+        listNeighbours.append(self.Matrix[point.R+1][point.C])    
+        listNeighbours.append(self.Matrix[point.R+1][point.C-1]) 
+        listNeighbours.append(self.Matrix[point.R][point.C-1])
+        listNeighbours.append(self.Matrix[point.R-1][point.C-1])      
         return listNeighbours
 
     def is8Group(self,point:Point) -> bool:
         n=self.getNeighboursList(point)
-        return all(x.State == 1 for x in n) or all(x.State == 0 for x in n) 
+        return (all(x.State == 1 for x in n) and point.State==1) or (all(x.State == 0 for x in n) and point.State==0)
+    def isCorrect(self,point:Point)->bool:
+        n=self.getNeighboursList(point)
+        return all(x.State == 0 for x in n) and point.State==1
 
     def toStrategyMatrix(self):
         Matrix=[[0 for x in range(self.N+2)] for y in range(self.M+2)] 

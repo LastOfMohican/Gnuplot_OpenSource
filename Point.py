@@ -7,6 +7,6 @@ class Point:
         self.State=state
         self.Strategy=strat
         
-    def setGlobalId(self,size:int):
-        self.globalId= size*self.R+self.C
+    def getGlobalId(self,size:int):
+        self.globalId= (size*(self.R-1)+(self.C-1))+1
         

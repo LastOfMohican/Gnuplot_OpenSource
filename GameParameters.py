@@ -10,7 +10,7 @@ class MapParameters:
         
     def getTestData():
         return MapParameters(
-            10,10,0.4
+            
         )    
            
 class StrategiesParameters:
@@ -25,7 +25,7 @@ class StrategiesParameters:
 
     def getTestData():
         return StrategiesParameters(
-            0.3,0.3,0.1,0.1,0.2,1,8
+            
         )                     
 class ComprtitionType(Enum):
     Roulette = 0
@@ -42,7 +42,7 @@ class MutationParameters:
         
     def getTestData():
         return MutationParameters(
-            0.1,0.1,0.1,0.1
+          
         )   
 class DebugParameters(Enum):
     ReadState = 0
@@ -67,19 +67,21 @@ class PlayoffParameters:
         self.D=d
     def getTestData():
         return PlayoffParameters(
-            0.3,0.2,0.3,0.2
+           
         )      
         
 class GameParameters:
-    def __init__(self, mapParameters: MapParameters, strategeiesParameters:StrategiesParameters,sharing:bool,
-                 comprtitionType:ComprtitionType, mutationParameters:MutationParameters,seed:int, 
+    def __init__(self, mapParameters: MapParameters, strategiesParameters:StrategiesParameters,sharing:bool,
+                 comprtitionType:ComprtitionType, mutationParameters:MutationParameters,seed:int, num_of_iter:int,num_of_exper:int,
                 debugParameters:list[DebugParameters],playoffParameters:PlayoffParameters,synchProlo:float,optimalNum1:int,testParameters:list[TestParameters]) -> None:
         self.MapParameters=mapParameters
-        self.StrategeiesParameters=strategeiesParameters
+        self.StrategeiesParameters=strategiesParameters
         self.Sharing=sharing
         self.ComprtitionType=comprtitionType
         self.MutationParameters=mutationParameters
         self.Seed=seed
+        self.num_of_iter=num_of_iter
+        self.num_of_exper=num_of_exper
         self.DebugParameters=debugParameters
         self.PlayoffParameters=playoffParameters
         self.SynchProlo=synchProlo
@@ -88,17 +90,15 @@ class GameParameters:
         
     def getTestData()->GameParameters:
         return GameParameters(
-            MapParameters.getTestData(),
-            StrategiesParameters.getTestData(),
-            True,
-            ComprtitionType.getTestData(),
-            MutationParameters.getTestData(),
-            890,
-            DebugParameters.getTestData(),
-            PlayoffParameters.getTestData(),
-            1.0,
-            676,
-            [1,2]
+            mapParameters=MapParameters.getTestData(),
+            strategiesParameters=StrategiesParameters.getTestData(),
+            sharing=True,
+            comprtitionType=ComprtitionType.getTestData(),
+            mutationParameters=MutationParameters.getTestData(),
+#######
+            debugParameters=DebugParameters.getTestData(),
+            playoffParameters=PlayoffParameters.getTestData(),
+####
         )    
         
         

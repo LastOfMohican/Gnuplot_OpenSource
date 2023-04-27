@@ -19,7 +19,7 @@ class GameProvider:
         self.MapList.append(map)
         
         self.PrepareStatistic()
-        self.saveStatisticToFile("results.txt")
+        self.saveStatisticToFile("dupa123")
 
     def PrepareStatistic(self):
         for x in self.MapList:
