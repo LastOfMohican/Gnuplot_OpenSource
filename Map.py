@@ -5,8 +5,8 @@ class Map:
         self.N=N
         self.M=M
         self.Matrix=[[0 for x in range(N+2)] for y in range(M+2)] 
-        self.Group8_0=[[]]
-        self.Group8_1=[[]]
+        self.Group8_0=[]
+        self.Group8_1=[]
     def getNeighboursMap(self,point:Point) -> Map:
         mapNeighbours: Map = Map(3,3)
         listNeighbours:list =self.getNeighboursList(point)

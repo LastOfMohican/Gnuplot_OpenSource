@@ -65,6 +65,7 @@ class PlayoffParameters:
         self.B=b
         self.C=c
         self.D=d
+        
     def getTestData():
         return PlayoffParameters(
            
