@@ -23,27 +23,28 @@ for el in Matrix.States:
 print("STRAT")
 print("STRAT")
 for el in Matrix.Strategies:
-    print(el+"\n")
+    print(el)
+
 print("KD")
 print("KD")
 for el in Matrix.KDstrat:
-    print(el+"\n")
+    print(el)
 
 print("KC")
 print("KC")
 for el in Matrix.KCstrat:
-    print(el+"\n")
+    print(el)
 
 
 print("KDC")
 print("KDC")
 for el in Matrix.KDCstrat:
-    print(el+"\n")
+    print(el)
 
 print("CDA")
 print("CDA")
 for el in Matrix.CDActions:
-    print(el+"\n")
+    print(el)
 print("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 print("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 
