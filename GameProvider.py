@@ -37,6 +37,6 @@ class GameProvider:
         return mapf.generateMapFromGameParameters(self.gameParameters)
 
     def saveStatisticToFile(self):
-        fp = FileProvider(self.gameParameters)
-        fp.WriteStatisticARange(self.StatsA)
-        fp.WriteStatisticBRange(self.StatsB)
+        pass 
+     ###tutaj musicie napisac kod który zapisze do pliku elf.StatsA
+     #i elf.StatsB
