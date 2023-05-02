@@ -10,7 +10,7 @@ class MapParameters:
         
     def getTestData():
         return MapParameters(
-            90,90,0.5
+            40,40,0.5
         )    
            
 class StrategiesParameters:
