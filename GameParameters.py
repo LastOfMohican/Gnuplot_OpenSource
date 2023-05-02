@@ -10,7 +10,7 @@ class MapParameters:
         
     def getTestData():
         return MapParameters(
-            
+            90,90,0.5
         )    
            
 class StrategiesParameters:
@@ -25,7 +25,7 @@ class StrategiesParameters:
 
     def getTestData():
         return StrategiesParameters(
-            
+            0.2,0.2,0.2,0.2,0.2,0,8
         )                     
 class ComprtitionType(Enum):
     Roulette = 0
@@ -42,14 +42,14 @@ class MutationParameters:
         
     def getTestData():
         return MutationParameters(
-          
+            0.1,0.1,0.1,0.1
         )   
 class DebugParameters(Enum):
-    ReadState = 0
+    ReadState = 1
     ReadStrategy = 1
     
     def getTestData():
-        return DebugParameters.ReadState
+        return 1
 
 class TestParameters(Enum):
     Test1 = 1
@@ -65,10 +65,9 @@ class PlayoffParameters:
         self.B=b
         self.C=c
         self.D=d
-        
     def getTestData():
         return PlayoffParameters(
-           
+            0.3,0.2,0.3,0.2
         )      
         
 class GameParameters:
@@ -76,7 +75,7 @@ class GameParameters:
                  comprtitionType:ComprtitionType, mutationParameters:MutationParameters,seed:int, num_of_iter:int,num_of_exper:int,
                 debugParameters:list[DebugParameters],playoffParameters:PlayoffParameters,synchProlo:float,optimalNum1:int,testParameters:list[TestParameters]) -> None:
         self.MapParameters=mapParameters
-        self.StrategeiesParameters=strategiesParameters
+        self.StrategiesParameters=strategiesParameters
         self.Sharing=sharing
         self.ComprtitionType=comprtitionType
         self.MutationParameters=mutationParameters
@@ -96,10 +95,14 @@ class GameParameters:
             sharing=True,
             comprtitionType=ComprtitionType.getTestData(),
             mutationParameters=MutationParameters.getTestData(),
-#######
+            seed=890,
+            num_of_iter=100,
+            num_of_exper=1,
             debugParameters=DebugParameters.getTestData(),
             playoffParameters=PlayoffParameters.getTestData(),
-####
+            synchProlo=0.5,
+            optimalNum1=676,
+            testParameters=[1,2]
         )    
         
         
