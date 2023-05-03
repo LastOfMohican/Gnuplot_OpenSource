@@ -37,7 +37,7 @@ class MapStatisticFactory:
             iter=self.iter,
             f_C=round(self.num_of_C/(C*R), 2),
             f_C_corr=round(self.resolveZero(self.num_c_corr,self.gameParameters.OptimalNum1), 2),
-            av_pay=round(9, 2),  # na razie
+            av_pay=round(0, 2),  # na razie
             f_cr_0=round(len(self.Map.Group8_0)/(C*R), 2),
             f_cr_1=round(len(self.Map.Group8_1)/((C-2)*(R-2)), 2),
             f_allC=round(np.sum(self.StrategyMatrix[StrategiesEnum.allC.value])/(C*R), 2),
@@ -45,7 +45,7 @@ class MapStatisticFactory:
             f_Kd=round(num_of_kc/(C*R),  2),
             f_Kc=round(num_of_kd/(C*R),  2),
             f_Kdc=round(num_of_kdc/(C*R),  2),
-            fstrat_ch=round(9, 2)  # na razie
+            fstrat_ch=round(0, 2)  # na razie
         )
         kD=StrategiesEnum.kD.value
         kC=StrategiesEnum.kC.value
